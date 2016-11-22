@@ -1,6 +1,6 @@
 {
   "name": "Carnaval 2017",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Extensão Google Chrome para lembrar todo dia quantos dias faltam para o carnaval.",
   "icons" : {

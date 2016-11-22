@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Notification.requestPermission();
 });
 
+var url = "www.victormartins.com.br/carnaval";
 var notifyMe = function() {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
@@ -31,13 +32,13 @@ var notifyMe = function() {
       body: " ",
     });
     notification.onclick = function () {
-      window.open("localhost:3000", "_blank");
+      window.open(url, "_blank");
     };
   }
 }
 
 chrome.browserAction.onClicked.addListener(function(tab) { //Fired when User Clicks ICON
-  window.open("localhost:3000", "_blank");
+  window.open(url, "_blank");
 });
 
 function setToHappen(fn, d){
