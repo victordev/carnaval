@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: #E5E5E5;
+  color: #333;
+}
+
+.title {
+  margin: 0;
+  padding: .85em 0;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+  letter-spacing: 5px;
+  background-image: -webkit-gradient(linear, left top, right top,  from(#ffb912), to(#ff205e));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.countdown-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: calc(-135px/2);
+  margin-left: calc(-330px/2);
+  width: 330px;
+}
+
+.countdown-container h2 {
+  margin: 0;
+}
+
+#countdown {
+  margin-bottom: 10px;
+}
+
+.number {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.x {
+  font-size: 48px;
+  line-height: 1;
+}
