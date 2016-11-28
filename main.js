@@ -32,9 +32,3 @@ function showRemaining() {
 }
 
 timer = setInterval(showRemaining, 1000);
-
-
-var install = document.querySelector('.js-install-btn');
-if (window.chrome.app.isInstalled) {
-  console.log('installed')
-}

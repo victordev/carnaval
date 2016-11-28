@@ -52,5 +52,25 @@
 
   <!-- <button onclick="notifyMe()">Notify me!</button> -->
   <script src="main.js"></script>
+  <script>
+    function successCallback() {
+            window.alert('success');
+        }
+
+
+        function failureCallback() {
+            window.alert('failure');
+        }
+
+
+
+        function ExtInstall() {
+            if (chrome.app.isInstalled)
+                alert("already installed!");
+            else
+                chrome.webstore.install('https://chrome.google.com/webstore/detail/gjcjfgolhhdeooddgkgolggkecldfipa',
+            successCallback, failureCallback);
+        }
+  </script>
 </body>
 </html>
