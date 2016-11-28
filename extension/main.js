@@ -31,10 +31,5 @@ function showRemaining() {
   document.getElementById('seconds').innerHTML = seconds;
 }
 
-timer = setInterval(showRemaining, 1000);
+timer = setInterval(showRemaining);
 
-
-var install = document.querySelector('.js-install-btn');
-if (window.chrome.app.isInstalled) {
-  console.log('installed')
-}

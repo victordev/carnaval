@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
     Notification.requestPermission();
 });
 
-var url = "www.victormartins.com.br/carnaval";
+var url = "https://www.victormartins.com.br/carnaval/";
 var notifyMe = function() {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
     var notification = new Notification('Faltam ' + days + ' dias para o carnaval!', {
       icon: 'icon128.png',
-      body: " ",
+      body: "aaaaaaaaaaaa",
     });
     notification.onclick = function () {
       window.open(url, "_blank");
@@ -37,16 +37,4 @@ var notifyMe = function() {
   }
 }
 
-chrome.browserAction.onClicked.addListener(function(tab) { //Fired when User Clicks ICON
-  window.open(url, "_blank");
-});
-
-function setToHappen(fn, d){
-    var t = now.getTime() - (new Date()).getTime();
-    return setTimeout(fn, t);
-};
-
-var hr = now.getHours();
-if (hr == 15 ) {
-  setToHappen(notifyMe, hr);
-}
+chrome.windows.onCreated.addListener(notifyMe);
