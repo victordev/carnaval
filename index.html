@@ -49,7 +49,7 @@
   </div>
 
   <script>
-    if (chrome.app.isInstalled) {
+    if (window.chrome.app.isInstalled) {
       console.log("installed")
       document.querySelector('.js-install-btn').disabled = true;
     } else {
