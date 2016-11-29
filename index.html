@@ -50,6 +50,7 @@
 
   <script>
     if (chrome.app.isInstalled) {
+      console.log("installed")
       document.querySelector('.js-install-btn').disabled = true;
     } else {
       console.log("not installed")
