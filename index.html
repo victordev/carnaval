@@ -49,9 +49,12 @@
   </div>
 
   <script>
-    if (window.chrome.app.isInstalled) {
+    if (typeof chrome !== "undefined" && typeof chrome.app !== "undefined" && chrome.app.isInstalled) {
       console.log("installed")
       document.querySelector('.js-install-btn').disabled = true;
+      // extension is installed.
+    // }
+    // if (window.chrome.app.isInstalled) {
     } else {
       console.log("not installed")
       // location.href = "https://chrome.google.com/webstore/detail/gjcjfgolhhdeooddgkgolggkecldfipa"
