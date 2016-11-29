@@ -32,15 +32,3 @@ function showRemaining() {
 }
 
 timer = setInterval(showRemaining, 1000);
-
-var url = "https://chrome.google.com/webstore/detail/carnaval-2017/gjcjfgolhhdeooddgkgolggkecldfipa"
-function installExt() {
-  chrome.webstore.install(url, success, err);
-
-  function success(res) {
-    console.log(res);
-  }
-  function err(err) {
-    console.log(err);
-  }
-}
