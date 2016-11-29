@@ -44,20 +44,17 @@
   </div>
 
   <div class="install-extension">
-    <button onclick="chrome.webstore.install()" class="button js-install-btn">
+    <button onclick="chrome.webstore.install()" class="button" id="install-btn">
       Instalar Extensão
     </button>
   </div>
 
   <script>
-    if (typeof chrome !== "undefined" && typeof chrome.app !== "undefined" && chrome.app.isInstalled) {
-      console.log("installed")
-      document.querySelector('.js-install-btn').disabled = true;
-      // extension is installed.
-    // }
-    // if (window.chrome.app.isInstalled) {
+    if (chrome.app.isInstalled) {
+      console.log('installed');
+      document.getElementById('install-btn').disabled = true;
     }
-</script>
+  </script>
 
   <script src="main.js"></script>
 </body>
