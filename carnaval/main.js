@@ -2,19 +2,19 @@
 
 // ------------------------------------------------------------------------------
 // COUNTDOWN --------------------------------------------------------------------
-var end = new Date(2017,01,23);
-
-var _second = 1000;
-var _minute = _second * 60;
-var _hour = _minute * 60;
-var _day = _hour * 24;
-var timer;
 
 function showRemaining() {
+  var end = new Date(2017,01,23);
+
+  var _second = 1000;
+  var _minute = _second * 60;
+  var _hour = _minute * 60;
+  var _day = _hour * 24;
+  var timer;
   var now = new Date();
   var distance = end - now;
-  if (distance < 0) {
 
+  if (distance < 0) {
     clearInterval(timer);
     document.getElementById('countdown').innerHTML = 'Já é Carnaval!!!';
 
