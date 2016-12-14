@@ -1,10 +1,7 @@
-/* eslint-env browser, es6 */
-
 // ------------------------------------------------------------------------------
 // COUNTDOWN --------------------------------------------------------------------
-
 function showRemaining() {
-  var end = new Date(2017,01,23);
+  var end = new Date(2017,01,24);
 
   var _second = 1000;
   var _minute = _second * 60;
@@ -14,9 +11,9 @@ function showRemaining() {
   var now = new Date();
   var distance = end - now;
 
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(timer);
-    document.getElementById('countdown').innerHTML = 'Já é Carnaval!!!';
+    document.body.innerHTML = '<h1 class="title">Já é Carnaval!</h1>';
 
     return;
   }
@@ -32,4 +29,3 @@ function showRemaining() {
 }
 
 timer = setInterval(showRemaining);
-

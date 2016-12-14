@@ -21,7 +21,6 @@ body {
 
 .countdown-container {
   margin: 80px auto;
-  // width: 330px;
 }
 
 .countdown-container h2 {
@@ -43,24 +42,4 @@ body {
   font-family: Arial, sans-serif;
   font-size: 48px;
   line-height: 1;
-}
-
-.button {
-  padding: 10px 20px;
-  display: inline-block;
-  color: #fff;
-  border: 0;
-  background: -webkit-gradient(linear, left top, right top,  from(#FF8620), to(#FF6432));
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  transition: .3s all;
-}
-
-.button:hover {
-  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
 }

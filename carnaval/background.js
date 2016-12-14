@@ -1,51 +1,43 @@
 // ------------------------------------------------------------------------------
 // COUNTDOWN --------------------------------------------------------------------
-var end = new Date(2017,01,23);
+var timeRemaining = {
+  days: function() {
+    var end = new Date(2017,01,24);
 
-var _second = 1000;
-var _minute = _second * 60;
-var _hour = _minute * 60;
-var _day = _hour * 24;
-var timer;
-var now = new Date();
-var distance = end - now;
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var now = new Date();
+    var distance = end - now;
 
-var date = {
-  days: Math.floor(distance / _day),
-  hours: Math.floor((distance % _day) / _hour),
-  minutes: Math.floor((distance % _hour) / _minute),
-  seconds: Math.floor((distance % _minute) / _second)
-}
 
-function showRemaining() {
-  if (distance < 0) {
-    clearInterval(timer);
-    console.log('Já é Carnaval!!!');
+    var days = Math.floor(distance / _day);
 
-    return;
+    if (distance <= 0) {
+      return 'JÁ É CARNAVAL!';
+    } else {
+      return 'Faltam ' + days + ' dias para o carnaval!';
+    }
   }
-
-  date;
 }
 
-
-timer = setInterval(showRemaining);
+var titleNotification = timeRemaining.days();
 
 // ------------------------------------------------------------------------------
 // NOTIFICATIONS ----------------------------------------------------------------
-var url = "https://victormartins.com.br/carnaval/";
-var notifyMe = function() {
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
-  else {
-    var notification = new Notification('Faltam ' + date.days + ' dias para o carnaval!', {
-      icon: 'icon128.png',
-      body: "aaaaaaaaaaaa",
-    });
-    notification.onclick = function () {
-      window.open(url, "_blank");
-    };
-  }
+var options = {
+  body: 'Clique aqui para saber mais.',
+  icon: 'img/icon128.png',
+
+  url: 'https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=carnaval+2017&tbm=nws',
 }
 
-chrome.windows.onCreated.addListener(notifyMe);
+var notify = function() {
+  var notification = new Notification(titleNotification, options);
+  notification.onclick = function () {
+    window.open(options.url, "_blank");
+  };
+}
+
+chrome.windows.onCreated.addListener(notify);

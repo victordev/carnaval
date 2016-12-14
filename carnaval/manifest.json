@@ -1,13 +1,13 @@
 {
   "name": "Carnaval 2017",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "manifest_version": 2,
   "description": "Extensão para lembrar todo dia quantos dias faltam para o carnaval.",
   "icons" : {
-    "16" : "icon16.png",
-    "32" : "icon32.png",
-    "48" : "icon48.png",
-    "128" : "icon128.png"
+    "16" : "img/icon16.png",
+    "32" : "img/icon32.png",
+    "48" : "img/icon48.png",
+    "128" : "img/icon128.png"
   },
   "permissions": [
     "notifications"
@@ -17,6 +17,6 @@
   },
   "browser_action": {
     "default_title": "Carnaval 2017",
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   }
 }
